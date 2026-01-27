@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CharactorBase : MonoBehaviour
 {
-    [SerializeField] public GamaManagerSO gameManegerSO;
-    [SerializeField] public Animator animator;
+    [SerializeField] protected GamaManagerSO gameManegerSO;
+    [SerializeField] protected Animator animator;
 
     protected float currentHP = 0;
     protected float currentmoveSpeed = 0;

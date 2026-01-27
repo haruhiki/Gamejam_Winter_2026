@@ -14,7 +14,9 @@ public class Player : CharactorBase
 
     private void Update()
     {
-
+        //í‚ÉXV
+        currentmoveSpeed = gameManegerSO.statusMoveSpeed;
+        currentmoveJump = gameManegerSO.statusMoveJump;
     }
 
     private void FixedUpdate()
