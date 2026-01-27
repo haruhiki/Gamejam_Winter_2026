@@ -8,15 +8,17 @@ using UnityEngine;
 public class GamaManagerSO : ScriptableObject 
 {
     [Header("受け渡しステータス")]
-   [SerializeField] public float statusHP = 100.0f;
-   [SerializeField] public float statusMoveSpeed = 10.0f;
-   [SerializeField]  public float statusMoveJump = 10.0f;
-   [SerializeField]  public float statusAttackDelay = 0.5f;
+    [SerializeField] public float statusHP = 100.0f;
+    [SerializeField] public float statusMoveSpeed = 10.0f;
+    [SerializeField] public float statusMoveJump = 10.0f;
+    [SerializeField] public float statusAttackDelay = 0.5f;
+    [SerializeField] public float slashSpeed = 30.0f;
+    [SerializeField] public float effectlifeTime = 0.5f;
 
     [Header("タイム関連")]
     public int eventTime = 10;
     public int gameTime = 0;
-    public int gameTimeEnd = 300; //5分間で
+    public int gameTimeEnd = 180; //5分間で
 
     [Header("管理用フラグ")]
     public bool gameflg = false; //ゲームフラグ　ー＞クリア判定

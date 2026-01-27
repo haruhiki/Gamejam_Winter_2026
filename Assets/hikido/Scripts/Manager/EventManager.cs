@@ -24,16 +24,12 @@ public class EventManager : MonoBehaviour
         _gameSO.eventTime = (int)Time.deltaTime;
 
         //タイムリセット
-        if(_gameSO.eventTime > 10)
-        {
-            
-            _gameSO.eventTime = 0; 
-        }
+        if(_gameSO.eventTime > 10) { _gameSO.eventTime = 0; }
 
         //10秒ごとにランダムなイベント
         if( _gameSO.eventTime <= 10) 
         {
-            EventPlayer();
+            EventPlayer(); 
         }
 
     }
