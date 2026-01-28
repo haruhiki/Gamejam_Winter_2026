@@ -8,10 +8,12 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] GamaManagerSO _gameSO;
     private float randomStatus = 0;
+    WaitForSeconds onesec;
 
     void Start()
     {
         _gameSO.eventTime = 10.0f;
+        onesec = new WaitForSeconds(1);
     }
 
     void Update()
@@ -23,13 +25,31 @@ public class EventManager : MonoBehaviour
     {
         if (_gameSO == null) { return; }
 
+        if (_gameSO.eventTime < 3)
+        {
+            StartCoroutine(PlaySoundOneSec());
+           //InvokeRepeating("PlaySound", 0.0f, 1.0f);
+        }
+
         //10秒ごとにランダムなイベント
         if (_gameSO.eventTime < 0)
         {
+            AudioManager.Instance.PlayspecificSE("Event", 1);
             EventPlayer();
             //タイムリセット
             _gameSO.eventTime = 10.0f;
         }
+    }
+
+    private void PlaySound()
+    {
+        AudioManager.Instance.PlayspecificSE("Event", 0);
+    }
+
+    IEnumerator PlaySoundOneSec() 
+    {
+        AudioManager.Instance.PlayspecificSE("Event", 0);
+        yield return onesec;
     }
 
     public void EventPlayer()

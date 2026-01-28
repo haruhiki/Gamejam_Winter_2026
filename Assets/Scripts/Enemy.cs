@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -43,6 +44,9 @@ public class Enemy : MonoBehaviour
         // Rigidbodyコンポーネントを取得
         rb = GetComponent<Rigidbody>();
 
+        //ゲームオブジェクト取得
+        gameObject.GetComponent<GameObject>();
+
         // Rigidbodyがある場合、タイプに合わせて重力を設定
         if (rb != null)
         {
@@ -79,6 +83,26 @@ public class Enemy : MonoBehaviour
                     break;
             }
         }
+
+        StateEnemy();
+    }
+
+    private void StateEnemy()
+    {
+        int value = 0;
+        //プレイヤーとの距離で求める。
+        float norm = (target.transform.position - gameObject.transform.position).magnitude;
+        if (norm < 10.0f) { value = 0; }
+        else { value = 1; }
+        switch (value)
+        {
+            case 0:
+                //敵攻撃1
+                break;
+            case 1:
+                //敵攻撃2
+                break;
+        }
     }
 
     // 直線移動
@@ -102,4 +126,20 @@ public class Enemy : MonoBehaviour
         // 3. 常にターゲットの方を向く
         transform.LookAt(target);
     }
+
+    //プレイヤーかウェポンに触れた場合
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Weapon"))
+        {
+            AudioManager.Instance.PlayspecificSE("Enemy", 1);
+            Destroy(gameObject);
+        }
+    }
+
 }

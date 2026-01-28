@@ -9,7 +9,7 @@ public class UiLabel : MonoBehaviour
 {
     [SerializeField] public Text _timeText;
     [SerializeField] GamaManagerSO _gameSO;
-    public GameObject _gameimgae;
+    public GameObject[] _gameimgae;
     public Image _image;
     public Sprite[] _spriteImage;
     
@@ -18,7 +18,18 @@ public class UiLabel : MonoBehaviour
 
     private void Start()
     {
-      _gameimgae.SetActive(false);
+        _gameimgae[0].SetActive(false);
+        _gameimgae[1].SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        _gameSO.SceneChange += ActiveUIResult;
+    }
+
+    private void OnDisable()
+    {
+        _gameSO.SceneChange -= ActiveUIResult;
     }
 
     private void Update() 
@@ -27,11 +38,19 @@ public class UiLabel : MonoBehaviour
        ImageActive();
     }
 
+    private void ActiveUIResult() 
+    {
+        if(_gameSO.gameflg == true) 
+        {
+            _gameimgae[1].SetActive(true);
+        }
+    }
+
 
     //ÉCÉÅÅ[ÉWêÿÇËë÷Ç¶
     private void ImageActive()
     {
-        _gameimgae.SetActive(true);
+        _gameimgae[0].SetActive(true);
         switch (_gameSO.value)
         {
             case 0:
