@@ -8,44 +8,49 @@ using UnityEngine.UI;
 public class UiLabel : MonoBehaviour
 {
     [SerializeField] public Text _timeText;
+    [SerializeField] GamaManagerSO _gameSO;
+    public GameObject _gameimgae;
     public Image _image;
     public Sprite[] _spriteImage;
-    [SerializeField] GamaManagerSO _gameSO;
+    
+    
     float counttime = 10;
 
     private void Start()
     {
-      
+      _gameimgae.SetActive(false);
     }
 
     private void Update() 
     {
        CountDownTime();
+       ImageActive();
     }
 
 
     //ÉCÉÅÅ[ÉWêÿÇËë÷Ç¶
-    //private void ImageActive() 
-    //{
-    //    switch(_gameSO.value) 
-    //    {
-    //        case 0:
-    //            _image.sprite = _spriteImage[0];
-    //            break;
-    //        case 1:
-    //            _image.sprite = _spriteImage[1];
-    //            break;
-    //        case 2:
-    //            _image.sprite = _spriteImage[2];
-    //            break;
-    //        case 3:
-    //            _image.sprite = _spriteImage[3];
-    //            break;
-    //        case 4:
-    //            _image.sprite = _spriteImage[4];
-    //            break;
-    //    }
-    //}
+    private void ImageActive()
+    {
+        _gameimgae.SetActive(true);
+        switch (_gameSO.value)
+        {
+            case 0:
+                _image.sprite = _spriteImage[0];
+                break;
+            case 1:
+                _image.sprite = _spriteImage[1];
+                break;
+            case 2:
+                _image.sprite = _spriteImage[2];
+                break;
+            case 3:
+                _image.sprite = _spriteImage[3];
+                break;
+            case 4:
+                _image.sprite = _spriteImage[4];
+                break;
+        }
+    }
 
     private IEnumerator DelayUI() 
     {

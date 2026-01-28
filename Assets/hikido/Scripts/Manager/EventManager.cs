@@ -68,7 +68,8 @@ public class EventManager : MonoBehaviour
         float status = _gameSO.statusMoveSpeed;
         _gameSO.statusMoveSpeed = randomStatus;
         //10•bŒã‚ÉŒ³‚Ì”’l
-        if(_gameSO.eventTime < 0) { _gameSO.statusMoveSpeed = status + (_gameSO.statusMoveSpeed / 2); Debug.Log("Šm”F"); }
+        Debug.Log(_gameSO.eventTime);
+        if(_gameSO.eventTime < 0) { _gameSO.statusMoveSpeed = status + (_gameSO.statusMoveSpeed / 2); }
 
     }
 

@@ -11,11 +11,12 @@ public class Enemy : MonoBehaviour
     public int MinSpd;
     public int MaxSpd;
     float moveSpeed;
+
     [Header("îÚÇ‘Ç©îÚÇŒÇ»Ç¢Ç©ê›íËÇµÇƒ")]
     [SerializeField] private bool isGravity = false;
     [SerializeField] public Vector3 spowarnPos = new Vector3(0.0f,0.0f, 0.0f); 
     [SerializeField] private Rigidbody rb;
-    [SerializeField]
+
     private  void Start()
     {
         Init();
@@ -24,8 +25,6 @@ public class Enemy : MonoBehaviour
     private void Init() 
     {
         moveSpeed = Random.Range(MinSpd, MaxSpd) * 0.2f;
-
-        //   EnemyMove();
     }
 
     private void NewEnemyMove()
@@ -96,5 +95,6 @@ public class Enemy : MonoBehaviour
             this.gameObject.IsDestroyed();
         }
     }
+
 
 }
