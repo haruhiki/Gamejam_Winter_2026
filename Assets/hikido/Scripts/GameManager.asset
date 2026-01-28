@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusHP: 100
   statusMoveSpeed: 10
-  statusMoveJump: 10
+  statusMoveJump: 200
   statusAttackDelay: 0.5
-  eventTime: 10
-  gameTime: 0
+  slashSpeed: 30
+  effectlifeTime: 0.5
+  value: 4
+  randomValue: 9
+  eventTime: 6.5506744
+  gameTime: 1381964.9
   gameTimeEnd: 300
   gameflg: 0
   damageFlg: 0
-  randomValue: 9

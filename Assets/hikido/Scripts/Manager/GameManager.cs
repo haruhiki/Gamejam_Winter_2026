@@ -10,12 +10,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _gameSO.GetComponent<GamaManagerSO>();
+        _gameSO.Reset();
     }
 
     private void Update()
     {
-        if(_gameSO != null) { return; }
+        if(_gameSO == null) { return; }
+
+        _gameSO.gameTime += Time.time;
+        _gameSO.eventTime -= Time.deltaTime;
 
         if(_gameSO.gameTime <= _gameSO.gameTimeEnd) 
         {
