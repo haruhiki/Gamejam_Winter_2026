@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody rb;
     public int hitDamage = 10;
-    [SerializeField] PlayerHP _playerhp;
+    [SerializeField] GamaManagerSO _gameSO;
 
     void Start()
     {
@@ -140,6 +140,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Weapon"))
         {
             AudioManager.Instance.PlayspecificSE("Enemy", 0);
+            _gameSO.Score += 10;
             Destroy(gameObject);
         }
     }

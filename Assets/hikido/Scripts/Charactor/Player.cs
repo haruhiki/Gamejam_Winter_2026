@@ -12,7 +12,6 @@ public class Player : CharactorBase
     [SerializeField] Rigidbody _rb;
     [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;
-    [SerializeField] Enemy enemy;
     private float xRotation = 0f;
     private float yRotation = 0f;   
 
@@ -111,6 +110,7 @@ public class Player : CharactorBase
         const string AttackParam = "Attack";
         if (Input.GetMouseButton(0)) 
         {
+            AudioManager.Instance.PlayspecificSE("Player", 0);
             animator.SetTrigger(AttackParam);
         }
     }
