@@ -13,6 +13,7 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private Slider fadeSlider;
     [SerializeField] private float fadeSpeed = 2.0f;
     [SerializeField] private float damageInterval;
+    [SerializeField] private UiLabel _label;
     bool _isInterval = false;
 
     private void Start()
@@ -64,6 +65,7 @@ public class PlayerHP : MonoBehaviour
             if (_gameSO.statusHP >= 0)
             {
                 _gameSO.statusHP -= takeDamage;
+                _label.DamageImage();
                 UpdateHPBarUI();
                 //”s–k‚Ìˆ—
                 if (_gameSO.statusHP <= 0)

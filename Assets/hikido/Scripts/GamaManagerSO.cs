@@ -15,12 +15,14 @@ public class GamaManagerSO : ScriptableObject
     public float slashSpeed = 30.0f;
     public float effectlifeTime = 0.5f;
     public int   value = 0;
+    public int Score = 0;
     [SerializeField] public int randomValue = 6; //イベントの数
     
     [Header("タイム関連")]
     public float eventTime = 10;
     public float gameTime = 0;
-    public float gameTimeEnd = 180; 
+    public float gameTimeEnd = 180;
+    public float startTime = 0;
 
     [Header("管理用フラグ")]
     public bool gameflg = false; //ゲームフラグ　ー＞クリア判定
@@ -42,7 +44,11 @@ public class GamaManagerSO : ScriptableObject
         statusAttackDelay = 0.5f;
         slashSpeed = 30.0f;
         effectlifeTime = 0.5f;
+        eventTime = 10;
+        gameTime = 0;
+        gameTimeEnd = 180;
+        startTime = 0;
 
-    }
+}
 
 }

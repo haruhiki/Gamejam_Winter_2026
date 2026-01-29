@@ -12,7 +12,6 @@ public class Player : CharactorBase
     [SerializeField] Rigidbody _rb;
     [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;
-    [SerializeField] Enemy enemy;
     private float xRotation = 0f;
     private float yRotation = 0f;   
 
@@ -31,7 +30,7 @@ public class Player : CharactorBase
         currentmoveJump = gameManegerSO.statusMoveJump;
 
         //TODO：テストコードで後で削除
-        if (Input.GetKey("p")) { TestTeakeDamage(); }
+        //if (Input.GetKey("p")) { TestTeakeDamage(); }
     }
 
     private void FixedUpdate()
@@ -94,7 +93,7 @@ public class Player : CharactorBase
 
     private void HandleJump()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space"))
         {
             _rb.AddForce(transform.up * currentmoveJump);
             animator.SetBool("Jump", true);
@@ -109,8 +108,9 @@ public class Player : CharactorBase
     private void Attack() 
     {
         const string AttackParam = "Attack";
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButtonDown(0)) 
         {
+            AudioManager.Instance.PlayspecificSE("Player", 0);
             animator.SetTrigger(AttackParam);
         }
     }

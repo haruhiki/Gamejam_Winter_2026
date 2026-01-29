@@ -112,7 +112,7 @@ public class EventManager : MonoBehaviour
         _gameSO.statusMoveSpeed = randomStatus;
         //10秒後に元の数値
         Debug.Log(_gameSO.eventTime);
-        if(_gameSO.eventTime < 0) { _gameSO.statusMoveSpeed = status + (_gameSO.statusMoveSpeed / 2); }
+        if(_gameSO.eventTime < 0) { _gameSO.statusMoveSpeed = status; }
 
     }
 
@@ -121,7 +121,7 @@ public class EventManager : MonoBehaviour
         StatusRandom(200,400);
         float status = _gameSO.statusMoveJump;
         _gameSO.statusMoveJump = randomStatus;
-        if(_gameSO.eventTime < 0) { _gameSO.statusMoveJump = status + (_gameSO.statusMoveJump / 2); }
+        if(_gameSO.eventTime < 0) { _gameSO.statusMoveJump = status; }
     }
 
     //速度低下イベント

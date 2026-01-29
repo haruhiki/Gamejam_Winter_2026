@@ -21,6 +21,7 @@ public class SendSlashEffect : MonoBehaviour
         if(other.tag =="Enemy")
         {
             Debug.Log("ÚG‚µ‚Ä‚¢‚é‚æ");
+            Destroy(other.gameObject);
         }
     }
 
