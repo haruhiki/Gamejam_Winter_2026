@@ -441,7 +441,7 @@ MonoBehaviour:
   isFlying: 1
   minSpeed: 1
   maxSpeed: 10
-  rotationSpeed: 40
+  rotationSpeed: 10
 --- !u!1 &7939641433819198870
 GameObject:
   m_ObjectHideFlags: 0
