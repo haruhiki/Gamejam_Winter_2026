@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class AttackConotorol : MonoBehaviour
 {
-    private WeaponColision currentCollision;
-    public void SetcurrentWeaponCollision(WeaponColision colli) 
+    [SerializeField] private WeaponColision currentCollision;
+    private void Start()
     {
-        currentCollision = colli;
+        //currentCollision = GetComponent<WeaponColision>();
     }
 
     //アニメーションイベントでの呼び出し
-    public void EnableHitBox() 
-    {
-        if (currentCollision) { currentCollision.SetCollisionActive(true); }
+    public void EnableHitBox()
+    { 
+        if (currentCollision) 
+        {
+            currentCollision.SetCollisionActive(true); 
+        }
     }
 
     public void DisableHitBox() 
     {
-        if (currentCollision) { currentCollision.SetCollisionActive(false); }
+        if (currentCollision)
+        { 
+            currentCollision.SetCollisionActive(false); 
+        }
     }
 }

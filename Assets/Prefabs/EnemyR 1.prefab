@@ -439,9 +439,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   moveType: 1
   isFlying: 1
-  minSpeed: 1
-  maxSpeed: 10
-  rotationSpeed: 10
+  minSpeed: 50
+  maxSpeed: 80
+  rotationSpeed: 100
+  hitDamage: 10
+  _playerhp: {fileID: 0}
 --- !u!1 &7939641433819198870
 GameObject:
   m_ObjectHideFlags: 0

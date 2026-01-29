@@ -12,6 +12,7 @@ public class Player : CharactorBase
     [SerializeField] Rigidbody _rb;
     [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;
+    [SerializeField] Enemy enemy;
     private float xRotation = 0f;
     private float yRotation = 0f;   
 
@@ -108,7 +109,7 @@ public class Player : CharactorBase
     private void Attack() 
     {
         const string AttackParam = "Attack";
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButton(0)) 
         {
             animator.SetTrigger(AttackParam);
         }
@@ -116,9 +117,8 @@ public class Player : CharactorBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy") 
+        if(other.CompareTag("Enemy")) 
         {
-            //TODO:enemyÇÃÉ_ÉÅÅ[ÉWÇéÛÇØéÊÇÈ
             int _hitDamage = (int)enemyDamage;
             StartCoroutine(_plaerHP.HitDamage(_hitDamage));
         }

@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
     public Animator animator;
     private int randomStatus = 0;
     private float speed = 1.0f;
-    private Vector3 _coliderScale;
+    private Vector3 _coliderScale = new Vector3(1.5f, 1.5f, 1.5f);
     WaitForSeconds onesec;
     private bool isOnce = false;
 
@@ -20,7 +20,6 @@ public class EventManager : MonoBehaviour
     {
         isOnce = false;
         _gameSO.eventTime = 10.0f;
-       _coliderScale = _player._weapon.GetComponent<BoxCollider>().size = new Vector3(1.5f,1.5f,1.5f);
         onesec = new WaitForSeconds(1);
     }
 
@@ -42,13 +41,13 @@ public class EventManager : MonoBehaviour
         }
 
         //10秒ごとにランダムなイベント
-        if (_gameSO.eventTime < 0)
+        if (_gameSO.eventTime < 0.5)
         {
             AudioManager.Instance.PlayspecificSE("Event", 1);
             EventPlayer();
             //タイムリセット
             isOnce = false;
-            _gameSO.eventTime = 10.0f;
+            _gameSO.eventTime = 10.5f;
         }
     }
 
@@ -153,7 +152,7 @@ public class EventManager : MonoBehaviour
 
     private void ColiderRange() 
     {
-        StatusRandom(3, 10);
+        StatusRandom(1,5);
         Vector3 status = _coliderScale;
         _player._weapon.GetComponent<BoxCollider>().size = new Vector3(randomStatus, randomStatus, randomStatus);
         if(_gameSO.eventTime < 0) { _player._weapon.GetComponent<BoxCollider>().size = status; }

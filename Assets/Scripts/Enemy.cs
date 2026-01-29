@@ -38,10 +38,12 @@ public class Enemy : MonoBehaviour
     private float rotateDir;
 
     private Rigidbody rb;
+    public int hitDamage = 10;
+    [SerializeField] PlayerHP _playerhp;
 
     void Start()
     {
-        // Rigidbodyコンポーネントを取得
+        // Rigidbodyコンポーネントを取
         rb = GetComponent<Rigidbody>();
 
         //ゲームオブジェクト取得
@@ -131,13 +133,13 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
-        {
+        { 
             Destroy(gameObject);
         }
 
         if (other.CompareTag("Weapon"))
         {
-            AudioManager.Instance.PlayspecificSE("Enemy", 1);
+            AudioManager.Instance.PlayspecificSE("Enemy", 0);
             Destroy(gameObject);
         }
     }
