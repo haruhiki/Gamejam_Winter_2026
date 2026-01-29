@@ -13,16 +13,18 @@ MonoBehaviour:
   m_Name: GameManager
   m_EditorClassIdentifier: 
   statusHP: 0
-  statusMoveSpeed: 10
-  statusMoveJump: 200
+  statusMoveSpeed: 38
+  statusMoveJump: 59
   statusAttackDelay: 0.5
   slashSpeed: 30
   effectlifeTime: 0.5
-  value: 0
+  value: 2
+  Score: 0
   randomValue: 6
-  eventTime: 3.2240608
-  gameTime: 1536514.9
-  gameTimeEnd: 300
+  eventTime: 4.9470115
+  gameTime: 0
+  gameTimeEnd: 180
+  startTime: 65.063705
   gameflg: 1
   damageFlg: 0
   statusFlg: 0

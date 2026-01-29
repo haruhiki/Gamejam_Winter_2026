@@ -85,15 +85,4 @@ public class Enemy_ : MonoBehaviour
         
     }
 
-    //ÚG”»’è
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            Debug.Log("‚â‚ç‚ê‚é");
-            this.gameObject.IsDestroyed();
-        }
-    }
-
-
 }

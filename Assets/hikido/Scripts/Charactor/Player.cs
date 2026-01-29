@@ -13,11 +13,13 @@ public class Player : CharactorBase
     [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;
     private float xRotation = 0f;
-    private float yRotation = 0f;   
+    private float yRotation = 0f;
+    bool isJumping = false;
 
     protected override void Start() 
     {
         base.Start();
+        isJumping = false;
         _plaerHP.GetComponent<PlayerHP>();   
         _rb.GetComponent<Rigidbody>();
         //_playertransform = GetComponent<Transform>();
@@ -46,6 +48,7 @@ public class Player : CharactorBase
 
         //マウスでのカメラ
         CameraControl();
+
     }
 
     //カメラコントロール
@@ -74,12 +77,13 @@ public class Player : CharactorBase
         if (UnityEngine.Input.GetKey("s"))
         {
             transform.position -= transform.forward * currentmoveSpeed * Time.deltaTime; //後ろ移動
+            
             animator.SetBool("back", true);
         }
         else { animator.SetBool("back", false); }
         if (UnityEngine.Input.GetKey("a"))
         {
-            transform.position -= transform.right * currentmoveSpeed * Time.deltaTime;   //左移動
+            transform.position -= transform.right * currentmoveSpeed * Time.deltaTime;
             animator.SetBool("Left",true);
         }
         else { animator.SetBool("Left", false); }
@@ -93,10 +97,15 @@ public class Player : CharactorBase
 
     private void HandleJump()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
-            _rb.AddForce(transform.up * currentmoveJump);
-            animator.SetBool("Jump", true);
+            if(isJumping == false) 
+            {
+                _rb.AddForce(transform.up * currentmoveJump);
+                animator.SetBool("Jump", true);
+            }
+            AudioManager.Instance.PlayspecificSE("Player", 3);
+            isJumping = true;
         }
         else
         {
@@ -124,11 +133,21 @@ public class Player : CharactorBase
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "ground") 
+        {
+            isJumping = false;
+        }
+    }
+
     //testcode
     private void TestTeakeDamage() 
     {
         int _hitDamage = (int)enemyDamage;
         StartCoroutine(_plaerHP.HitDamage(_hitDamage));
     }
+
+
 
 }

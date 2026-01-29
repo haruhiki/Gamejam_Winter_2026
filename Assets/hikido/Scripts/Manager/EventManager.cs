@@ -9,6 +9,25 @@ public class EventManager : MonoBehaviour
     [SerializeField] GamaManagerSO _gameSO;
     [SerializeField] Player _player;
     [SerializeField] UiLabel _label;
+
+    [Header("Jumpのパワー（ランダム値")]
+    [SerializeField] private int minJumpPowerand; 
+    [SerializeField] private int maxJumpPowerand;
+
+    [Header("Speedのランダム設定値")]
+    [SerializeField] private int minrandspeed;
+    [SerializeField] private int maxrandspeed;
+
+    [Header("ステータスダウンスピードランダム値")]
+    [SerializeField] private int mindownSpeed;
+    [SerializeField] private int maxdownSpeed;
+
+    [Header("ステータスダウンジャンプランダム値")]
+    [SerializeField] private int minJumpPower;
+    [SerializeField] private int maxJumpPower;
+
+   
+
     public Animator animator;
     private int randomStatus = 0;
     private float speed = 1.0f;
@@ -107,7 +126,7 @@ public class EventManager : MonoBehaviour
     private void StatusSpeedEvent() 
     {
         //TODO:マジックナンバーなくす
-        StatusRandom(20,100);
+        StatusRandom(minrandspeed,maxrandspeed);
         float status = _gameSO.statusMoveSpeed;
         _gameSO.statusMoveSpeed = randomStatus;
         //10秒後に元の数値
@@ -118,7 +137,7 @@ public class EventManager : MonoBehaviour
 
     private void StatusGravityEvent() 
     {
-        StatusRandom(200,400);
+        StatusRandom(minJumpPower,maxJumpPower);
         float status = _gameSO.statusMoveJump;
         _gameSO.statusMoveJump = randomStatus;
         if(_gameSO.eventTime < 0) { _gameSO.statusMoveJump = status; }
@@ -127,7 +146,7 @@ public class EventManager : MonoBehaviour
     //速度低下イベント
     private void SpeedStatusDownEvent() 
     {
-        StatusRandom(0, 19);
+        StatusRandom(mindownSpeed, maxdownSpeed);
         float status = _gameSO.statusMoveSpeed;
         _gameSO.statusMoveSpeed = randomStatus;
         if(_gameSO.eventTime  < 0) { _gameSO.statusMoveSpeed = status; }
@@ -136,7 +155,7 @@ public class EventManager : MonoBehaviour
     //ジャンプパワー低下イベント
     private void JumpStatusDownEvent()
     {
-        StatusRandom(0, 199);
+        StatusRandom(minJumpPower, maxJumpPower);
         float status = _gameSO.statusMoveJump;
         _gameSO.statusMoveJump = randomStatus;
         if (_gameSO.eventTime < 0) { _gameSO.statusMoveJump = status; }
