@@ -49,11 +49,8 @@ MonoBehaviour:
   seSource: {fileID: 1454144037462033219}
   bgmSource: {fileID: 1761180758447833956}
   bgmData:
-  - bgm: 1
-    bgmClip: {fileID: 8300000, guid: c4c632fb69ed6be4a9221d49ce05bf3a, type: 3}
-    bgmVolume: 0
   - bgm: 0
-    bgmClip: {fileID: 8300000, guid: 84be067bc7afd4f4b935f24cda9306e1, type: 3}
+    bgmClip: {fileID: 8300000, guid: c4c632fb69ed6be4a9221d49ce05bf3a, type: 3}
     bgmVolume: 1
   seCategories:
   - categoryName: Event
@@ -68,16 +65,10 @@ MonoBehaviour:
     sounds:
     - data: 0
       seClip: {fileID: 8300000, guid: 471f37fa52b640f4bbf3fc0779fec463, type: 3}
-      seVolume: 0.1
+      seVolume: 1
     - data: 0
       seClip: {fileID: 8300000, guid: b3f7e806871ee9a46a6ce8965b8b2903, type: 3}
-      seVolume: 0.4
-    - data: 0
-      seClip: {fileID: 8300000, guid: 51744a0c67cdf624f8567f5bea3c5527, type: 3}
-      seVolume: 0.4
-    - data: 0
-      seClip: {fileID: 8300000, guid: 65cf47f48ab86a944b1257792115991d, type: 3}
-      seVolume: 0.4
+      seVolume: 1
   - categoryName: Enemy
     sounds:
     - data: 1
@@ -98,7 +89,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -195,7 +185,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

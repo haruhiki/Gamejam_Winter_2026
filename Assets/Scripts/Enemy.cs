@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     {
         Straight, // 直線移動
         Spiral,    // 螺旋移動
-        shot,
+        Jump,
     }
 
     [Header("タイプ設定 (Type)")]
@@ -40,7 +40,6 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody rb;
     public int hitDamage = 10;
-    bool isDead = false;
     [SerializeField] GamaManagerSO _gameSO;
 
     void Start()
@@ -85,7 +84,7 @@ public class Enemy : MonoBehaviour
                 case MoveType.Spiral:
                     MoveSpiral();
                     break;
-                case MoveType.shot:
+                case MoveType.Jump:
 
                     break;
 
@@ -93,8 +92,6 @@ public class Enemy : MonoBehaviour
         }
 
         StateEnemy();
-
-        if(isDead) { Destroy(this.gameObject); }
     }
 
     private void StateEnemy()
@@ -139,13 +136,7 @@ public class Enemy : MonoBehaviour
 
     private void MoveJump() 
     {
-        
-        
-    }
-
-    private void ShotEnemy() 
-    {
-       
+        float step = currentSpeed * factor * Time.deltaTime;
     }
 
     //プレイヤーかウェポンに触れた場合
@@ -153,19 +144,15 @@ public class Enemy : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         { 
-           isDead = true;
+            Destroy(gameObject);
         }
 
         if (other.CompareTag("Weapon"))
         {
             AudioManager.Instance.PlayspecificSE("Enemy", 0);
             _gameSO.Score += 10;
-            isDead = true;
+            Destroy(gameObject);
         }
     }
 
-    public bool IsDead()
-    {
-        return isDead;
-    }
 }

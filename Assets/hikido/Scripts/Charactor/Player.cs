@@ -10,7 +10,7 @@ public class Player : CharactorBase
     [SerializeField] GameObject _camera;
     [SerializeField]  public GameObject _weapon;
     [SerializeField] Rigidbody _rb;
-    [SerializeField] private float sensitivity = 3;
+    [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -18,11 +18,6 @@ public class Player : CharactorBase
 
     protected override void Start() 
     {
-        Vector3 currentRot = transform.localRotation.eulerAngles;
-        yRotation = currentRot.y;
-        xRotation = 0;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         base.Start();
         isJumping = false;
         _plaerHP.GetComponent<PlayerHP>();   
@@ -59,8 +54,8 @@ public class Player : CharactorBase
     //カメラコントロール
     private void CameraControl()
     {
-        float mx = UnityEngine.Input.GetAxisRaw("Mouse X") * sensitivity;
-        float my = UnityEngine.Input.GetAxisRaw("Mouse Y") * sensitivity;
+        float mx = UnityEngine.Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float my = UnityEngine.Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         yRotation += mx;
         xRotation -= my;
@@ -131,15 +126,10 @@ public class Player : CharactorBase
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Enemy")) 
+        if(other.CompareTag("Enemy")) 
         {
-            //if (other.gameObject.TryGetComponent<Enemy>(out var enemy)) return;
             int _hitDamage = (int)enemyDamage;
             StartCoroutine(_plaerHP.HitDamage(_hitDamage));
-            //if (!enemy.IsDead())
-            //{
-               
-            //}
         }
     }
 

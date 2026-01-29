@@ -178,6 +178,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.data[0].bgm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.data[1].bgm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.data[1].bgmClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 84be067bc7afd4f4b935f24cda9306e1, type: 3}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.data[0].bgmVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: bgmData.Array.data[1].bgmVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[2].seClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51744a0c67cdf624f8567f5bea3c5527, type: 3}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[3].seClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 65cf47f48ab86a944b1257792115991d, type: 3}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[0].sounds.Array.data[0].seVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[0].sounds.Array.data[1].seVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[0].seVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[1].seVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[2].seVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
+      propertyPath: seCategories.Array.data[1].sounds.Array.data[3].seVolume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7380425540550046572, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -898,10 +958,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 85.09477
       objectReference: {fileID: 0}
-    - target: {fileID: 3297216361272219818, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 3610393517410245109, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_Name
       value: Player
@@ -920,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4304174073504649454, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: sensitivity
-      value: 5
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5133879977941962006, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: _label
@@ -934,14 +990,6 @@ PrefabInstance:
       propertyPath: currentHPSlider
       value: 
       objectReference: {fileID: 1926016276}
-    - target: {fileID: 5310422549261272673, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6103645212293722070, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6231552283950040651, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 2.5444818
@@ -968,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2eeeff97b776ebb448b95d10d3cfc5c4, type: 2}
     - target: {fileID: 8838830230906234750, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1125,6 +1173,30 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2088829781}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: maxJumpPower
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: maxdownSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: maxrandspeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: minrandspeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: maxJumpPowerand
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
+      propertyPath: minJumpPowerand
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3357103076472349929, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
       propertyPath: m_Name
       value: Eventmanager (1)
@@ -1233,7 +1305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.z

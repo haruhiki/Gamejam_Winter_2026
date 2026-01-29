@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
         {
             _gameSO.gameflg = true;
             //ƒV[ƒ“‘JˆÚ
-            SceneManager.LoadScene("Result");
+            SceneManager.LoadScene("RankingScene");
         }
+       
     }
 }
