@@ -23,9 +23,8 @@ public class TitleManager : MonoBehaviour
     }
 
     public void GoGame()
-    {
-        isResult = true;
-        SceneManager.LoadScene("title");
+    { 
+        SceneManager.LoadScene("Game");
     }
 
     private void Result() 
