@@ -10,13 +10,13 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        AudioManager.Instance.PlayBGM(AudioManager.BGMSoundData.BGMDATA.TITLE);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isResult)
+        if (isResult) 
         {
             Result();
         }
@@ -25,6 +25,12 @@ public class TitleManager : MonoBehaviour
     public void GoGame()
     { 
         SceneManager.LoadScene("Game");
+        AudioManager.Instance.BGMStop();
+    }
+
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
     }
 
     private void Result() 
@@ -32,6 +38,7 @@ public class TitleManager : MonoBehaviour
         //タイトルシーンに戻る
         if (Input.GetKey(KeyCode.Return))
         {
+            AudioManager.Instance.BGMStop();
             SceneManager.LoadScene("title");
         }
     }
