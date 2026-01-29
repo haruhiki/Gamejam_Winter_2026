@@ -14,6 +14,7 @@ public class UiLabel : MonoBehaviour
 
     public GameObject[] _gameimage;
     public Image _image;
+    public Image _damageImage;
     public Sprite[] _spriteImage;
    
     float counttime = 10;
@@ -21,6 +22,7 @@ public class UiLabel : MonoBehaviour
     private void Start()
     { 
         _gameimage[1].SetActive(false);
+        _damageImage.color = Color.clear;
     }
 
     private void OnEnable()
@@ -37,7 +39,10 @@ public class UiLabel : MonoBehaviour
     {
         CountDownTime();
         //ImageActive();
-        ScoreCount();
+        if(Input.GetKeyDown(KeyCode.Escape)) { ScoreCount(); }
+        
+        _damageImage.color = Color.Lerp(_damageImage.color, Color.clear, Time.deltaTime);
+
     }
 
     private void ActiveUIResult() 
@@ -60,6 +65,11 @@ public class UiLabel : MonoBehaviour
 //while(){
             
             yield return new WaitForSeconds(1);
+    }
+
+    public void DamageImage() 
+    {
+        _damageImage.color = new Color(0.7f, 0, 0, 0.7f);
     }
 
     //ÉCÉÅÅ[ÉWêÿÇËë÷Ç¶
@@ -105,6 +115,4 @@ public class UiLabel : MonoBehaviour
     {
         _timeText.text =  _gameSO.eventTime.ToString("F0");
     }
-
-
 }

@@ -21,7 +21,8 @@ public class GamaManagerSO : ScriptableObject
     [Header("タイム関連")]
     public float eventTime = 10;
     public float gameTime = 0;
-    public float gameTimeEnd = 180; 
+    public float gameTimeEnd = 180;
+    public float startTime = 0;
 
     [Header("管理用フラグ")]
     public bool gameflg = false; //ゲームフラグ　ー＞クリア判定
@@ -43,7 +44,11 @@ public class GamaManagerSO : ScriptableObject
         statusAttackDelay = 0.5f;
         slashSpeed = 30.0f;
         effectlifeTime = 0.5f;
+        eventTime = 10;
+        gameTime = 0;
+        gameTimeEnd = 180;
+        startTime = 0;
 
-    }
+}
 
 }
