@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
     public enum MoveType
     {
         Straight, // 直線移動
-        Spiral    // 螺旋移動
+        Spiral,    // 螺旋移動
+        Jump,
     }
 
     [Header("タイプ設定 (Type)")]
@@ -83,6 +84,10 @@ public class Enemy : MonoBehaviour
                 case MoveType.Spiral:
                     MoveSpiral();
                     break;
+                case MoveType.Jump:
+
+                    break;
+
             }
         }
 
@@ -127,6 +132,11 @@ public class Enemy : MonoBehaviour
 
         // 3. 常にターゲットの方を向く
         transform.LookAt(target);
+    }
+
+    private void MoveJump() 
+    {
+        float step = currentSpeed * factor * Time.deltaTime;
     }
 
     //プレイヤーかウェポンに触れた場合
