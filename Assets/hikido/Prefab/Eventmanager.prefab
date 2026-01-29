@@ -45,3 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameSO: {fileID: 11400000, guid: 870aa122c51d32d478b990fc19e9de4b, type: 2}
+  _player: {fileID: 0}
+  _label: {fileID: 0}
+  minJumpPowerand: 200
+  maxJumpPowerand: 300
+  minrandspeed: 11
+  maxrandspeed: 50
+  mindownSpeed: 0
+  maxdownSpeed: 15
+  minJumpPower: 0
+  maxJumpPower: 100
+  animator: {fileID: 0}

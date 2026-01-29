@@ -178,66 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.data[0].bgm
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.data[1].bgm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.data[1].bgmClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 84be067bc7afd4f4b935f24cda9306e1, type: 3}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.data[0].bgmVolume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: bgmData.Array.data[1].bgmVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[2].seClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 51744a0c67cdf624f8567f5bea3c5527, type: 3}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[3].seClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 65cf47f48ab86a944b1257792115991d, type: 3}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[0].sounds.Array.data[0].seVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[0].sounds.Array.data[1].seVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[0].seVolume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[1].seVolume
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[2].seVolume
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996796372013313446, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
-      propertyPath: seCategories.Array.data[1].sounds.Array.data[3].seVolume
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 7380425540550046572, guid: a4628b121f7e28244a7c0bb5365624cf, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -556,10 +496,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6669955956809079454, guid: c8e0cef6d55a571469361d46b627b6e7, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 627000734, guid: ec1a28471d52f5c4689db64e77e2f787, type: 3}
     - target: {fileID: 7228410595793719647, guid: c8e0cef6d55a571469361d46b627b6e7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1189,30 +1125,6 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2088829781}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: maxJumpPower
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: maxdownSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: maxrandspeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: minrandspeed
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: maxJumpPowerand
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512293158741343183, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
-      propertyPath: minJumpPowerand
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3357103076472349929, guid: c6d867a9cbe2c264fbea43a7691e5157, type: 3}
       propertyPath: m_Name
       value: Eventmanager (1)
@@ -1315,10 +1227,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 2732924186811689353, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 5754491859699573875, guid: 1fca0403dc1cb1844abd2897462f5b7e, type: 3}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.1673
