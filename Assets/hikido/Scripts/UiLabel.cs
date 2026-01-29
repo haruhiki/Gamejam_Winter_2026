@@ -10,6 +10,7 @@ public class UiLabel : MonoBehaviour
 {
     [SerializeField] public Text _timeText;
     [SerializeField] GamaManagerSO _gameSO;
+
     public GameObject[] _gameimage;
     public Image _image;
     public Sprite[] _spriteImage;
@@ -17,8 +18,7 @@ public class UiLabel : MonoBehaviour
     float counttime = 10;
 
     private void Start()
-    {
-        _gameimage[0].SetActive(false);
+    { 
         _gameimage[1].SetActive(false);
     }
 
@@ -35,7 +35,9 @@ public class UiLabel : MonoBehaviour
     private void Update() 
     {
         CountDownTime();
-        ImageActive();
+        //ImageActive();
+        
+       
     }
 
     private void ActiveUIResult() 
@@ -46,11 +48,20 @@ public class UiLabel : MonoBehaviour
         }
     }
 
+    private IEnumerator scalerImage() 
+    {
+        _image.transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
+
+//while(){
+            
+            yield return new WaitForSeconds(1);
+    }
+
     //イメージ切り替え
     //valueの値 = 対応するステータスイベント
-    private void ImageActive()
+    public void ImageActive()
     {
-        _gameimage[0].SetActive(true);
+        //StartCoroutine(scalerImage());
         switch (_gameSO.value)
         {
             case 0:
