@@ -49,7 +49,7 @@ public class GamaManagerSO : ScriptableObject
         gameTime = 0;
         gameTimeEnd = 180;
         startTime = 0;
-
-}
+        Score = 0;
+    }
 
 }
