@@ -54,9 +54,9 @@ MonoBehaviour:
   _damageImage: {fileID: 0}
   _spriteImage:
   - {fileID: 627000734, guid: ec1a28471d52f5c4689db64e77e2f787, type: 3}
-  - {fileID: -1891766621, guid: d872af74b95e1e64fb6bbd7586a01fa0, type: 3}
-  - {fileID: 908024570, guid: 4e49db86effa1ed4d9dd882bd3d570fd, type: 3}
-  - {fileID: -510489163, guid: 68e9d65136021de4793187cbc7bd4efd, type: 3}
-  - {fileID: -250712880, guid: 20e43b94d4e55fc4bb88ea14e76cedc7, type: 3}
-  - {fileID: 908024570, guid: 4e49db86effa1ed4d9dd882bd3d570fd, type: 3}
+  - {fileID: 1664098926, guid: e151dc00dd8100b4db284425122cf84d, type: 3}
+  - {fileID: 2024063164, guid: c7926c869e7437248ad4a608fb7449f8, type: 3}
+  - {fileID: -305963539, guid: 8ae0d1840944c4642b666d06bbc2dd03, type: 3}
+  - {fileID: 178353217, guid: fd31c3c0a5556ff4f979250ec5d5feeb, type: 3}
+  - {fileID: 2024063164, guid: c7926c869e7437248ad4a608fb7449f8, type: 3}
   - {fileID: -1891766621, guid: d872af74b95e1e64fb6bbd7586a01fa0, type: 3}

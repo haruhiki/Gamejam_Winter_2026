@@ -28,6 +28,7 @@ public class GamaManagerSO : ScriptableObject
     public bool gameflg = false; //ゲームフラグ　ー＞クリア判定
     public bool damageFlg = false;
     public bool statusFlg = false;
+    public bool enemyisDead = false;
 
     public Action GameEventPlayer;
     public Action GameEventEnemy;
@@ -48,7 +49,7 @@ public class GamaManagerSO : ScriptableObject
         gameTime = 0;
         gameTimeEnd = 180;
         startTime = 0;
-
-}
+        Score = 0;
+    }
 
 }

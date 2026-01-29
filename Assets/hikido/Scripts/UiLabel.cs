@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -39,18 +40,20 @@ public class UiLabel : MonoBehaviour
     {
         CountDownTime();
         //ImageActive();
-        if(Input.GetKeyDown(KeyCode.Escape)) { ScoreCount(); }
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) {  }
+        ScoreCount();
         _damageImage.color = Color.Lerp(_damageImage.color, Color.clear, Time.deltaTime);
 
     }
 
     private void ActiveUIResult() 
     {
-        if(_gameSO.gameflg == true) 
-        {
-            _gameimage[1].SetActive(true);
-        }
+        //if(_gameSO.gameflg == true) 
+        //{
+        //    _gameimage[1].SetActive(true);
+        //}
+
+        SceneManager.LoadScene("Result");
     }
 
     private void ScoreCount() 
