@@ -763,6 +763,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1144956500}
     - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
+      propertyPath: _spriteImage.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
       propertyPath: '_gameimage.Array.data[0]'
       value: 
       objectReference: {fileID: 749631454}
@@ -770,6 +774,22 @@ PrefabInstance:
       propertyPath: '_gameimage.Array.data[1]'
       value: 
       objectReference: {fileID: 1390620561}
+    - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
+      propertyPath: '_spriteImage.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1201073320, guid: d3b845bf5e187894cb7b4a1e0a59d316, type: 3}
+    - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
+      propertyPath: '_spriteImage.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1898404990, guid: ccfe3e80dcb9836428044add606baef2, type: 3}
+    - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
+      propertyPath: '_spriteImage.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1746620277, guid: 3677034f16e3e0948ae3b9d462366e4f, type: 3}
+    - target: {fileID: 603860208789518557, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
+      propertyPath: '_spriteImage.Array.data[8]'
+      value: 
+      objectReference: {fileID: -2138334495, guid: 07986e5c2a1c5c94293d3b864d79a26a, type: 3}
     - target: {fileID: 1396747850543648093, guid: 55a1dbaedd5ca0d45b95a80513c2dc7a, type: 3}
       propertyPath: m_Name
       value: UiLabel

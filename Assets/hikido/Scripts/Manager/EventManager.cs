@@ -114,6 +114,14 @@ public class EventManager : MonoBehaviour
                 SpeedStatusDownEvent();
                 Debug.Log("スピードステータスダウンイベント");
                 break;
+            case 7:
+                AniamtionSpeedDown();
+                Debug.Log("アニメーションスピードダウン");
+                break;
+            case 8:
+                ColiderRangeDown();
+                Debug.Log("コライダーの範囲減少");
+                break;
 
         }
 
@@ -163,7 +171,7 @@ public class EventManager : MonoBehaviour
 
     private void AnimationSpeed() 
     {
-        StatusRandom(0, 10);
+        StatusRandom(10, 20);
         int statu = (int)speed;
         animator.SetInteger("Speed", randomStatus);
         if (_gameSO.eventTime < 0) { animator.SetInteger("Speed", (int)statu); }
@@ -175,6 +183,22 @@ public class EventManager : MonoBehaviour
         Vector3 status = _coliderScale;
         _player._weapon.GetComponent<BoxCollider>().size = new Vector3(randomStatus, randomStatus, randomStatus);
         if(_gameSO.eventTime < 0) { _player._weapon.GetComponent<BoxCollider>().size = status; }
+    }
+
+    private void AniamtionSpeedDown() 
+    {
+        StatusRandom(0, 5);
+        int status = (int)speed;
+        animator.SetInteger("Speed", randomStatus);
+        if (_gameSO.eventTime < 0) { animator.SetInteger("Speed", (int)status); }
+    }
+
+    private void ColiderRangeDown() 
+    {
+        StatusRandom(0, 3);
+        Vector3 status = _coliderScale;
+        _player._weapon.GetComponent<BoxCollider>().size = new Vector3(randomStatus, randomStatus, randomStatus);
+        if (_gameSO.eventTime < 0) { _player._weapon.GetComponent<BoxCollider>().size = status; }
     }
 
 
