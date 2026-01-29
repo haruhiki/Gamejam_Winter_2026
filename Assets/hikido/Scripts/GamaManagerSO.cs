@@ -25,6 +25,7 @@ public class GamaManagerSO : ScriptableObject
     [Header("管理用フラグ")]
     public bool gameflg = false; //ゲームフラグ　ー＞クリア判定
     public bool damageFlg = false;
+    public bool statusFlg = false;
 
     public Action GameEventPlayer;
     public Action GameEventEnemy;

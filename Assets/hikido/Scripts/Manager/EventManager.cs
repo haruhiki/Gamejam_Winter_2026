@@ -8,14 +8,17 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] GamaManagerSO _gameSO;
     [SerializeField] Player _player;
+    [SerializeField] UiLabel _label;
     public Animator animator;
     private int randomStatus = 0;
     private float speed = 1.0f;
     private Vector3 _coliderScale;
     WaitForSeconds onesec;
+    private bool isOnce = false;
 
     void Start()
     {
+        isOnce = false;
         _gameSO.eventTime = 10.0f;
        _coliderScale = _player._weapon.GetComponent<BoxCollider>().size = new Vector3(1.5f,1.5f,1.5f);
         onesec = new WaitForSeconds(1);
@@ -24,17 +27,18 @@ public class EventManager : MonoBehaviour
     void Update()
     {
         EventAction();
-        
     }
 
     private void EventAction()
     {
         if (_gameSO == null) { return; }
 
-        if (_gameSO.eventTime < 3)
+        if (_gameSO.eventTime < 3.5 && !isOnce)
         {
-            StartCoroutine(PlaySoundOneSec());
-           //InvokeRepeating("PlaySound", 0.0f, 1.0f);
+            isOnce = true;
+           Invoke("PlaySound", 1.0f);
+           Invoke("PlaySound", 2.0f);
+           Invoke("PlaySound", 0.0f);
         }
 
         //10秒ごとにランダムなイベント
@@ -43,6 +47,7 @@ public class EventManager : MonoBehaviour
             AudioManager.Instance.PlayspecificSE("Event", 1);
             EventPlayer();
             //タイムリセット
+            isOnce = false;
             _gameSO.eventTime = 10.0f;
         }
     }
@@ -60,7 +65,10 @@ public class EventManager : MonoBehaviour
 
     public void EventPlayer()
     {
+
         _gameSO.value = Random.Range(1, _gameSO.randomValue);
+        Debug.Log("_gameSO.randomValue" + _gameSO.randomValue);
+        Debug.Log("ランダムな値" + _gameSO.value);
         switch (_gameSO.value)
         {
             case 1:
@@ -90,6 +98,8 @@ public class EventManager : MonoBehaviour
                 break;
 
         }
+
+        _label.ImageActive();
     }
 
     //ランダムな値を取得するだけ

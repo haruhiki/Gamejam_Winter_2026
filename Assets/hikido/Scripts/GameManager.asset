@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3159ae364ec3545ae143fe655318ed, type: 3}
   m_Name: GameManager
   m_EditorClassIdentifier: 
-  statusHP: 100
+  statusHP: 0
   statusMoveSpeed: 10
   statusMoveJump: 200
   statusAttackDelay: 0.5
   slashSpeed: 30
   effectlifeTime: 0.5
-  value: 4
-  randomValue: 9
-  eventTime: 6.5506744
-  gameTime: 1381964.9
+  value: 0
+  randomValue: 6
+  eventTime: 3.2240608
+  gameTime: 1536514.9
   gameTimeEnd: 300
-  gameflg: 0
+  gameflg: 1
   damageFlg: 0
+  statusFlg: 0
