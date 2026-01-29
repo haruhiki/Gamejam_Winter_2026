@@ -15,3 +15,4 @@ EditorBuildSettings:
     path: Assets/uey/Result.unity
     guid: 4ef87a3aa31301040abb8f03206b1c7d
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
