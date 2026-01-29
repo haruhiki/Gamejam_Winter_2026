@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 7114692653003687904}
   - component: {fileID: 7752946923301021538}
   m_Layer: 0
-  m_Name: EnemyS
+  m_Name: EnemyS _2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.92, y: 4.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5779732179272930538}
@@ -231,8 +231,8 @@ MonoBehaviour:
   moveType: 0
   isFlying: 0
   minSpeed: 1
-  maxSpeed: 10
-  rotationSpeed: 60
+  maxSpeed: 5
+  rotationSpeed: 50
 --- !u!54 &7752946923301021538
 Rigidbody:
   m_ObjectHideFlags: 0
