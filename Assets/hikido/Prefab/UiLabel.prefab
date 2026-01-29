@@ -51,7 +51,10 @@ MonoBehaviour:
   - {fileID: 0}
   _image: {fileID: 0}
   _spriteImage:
+  - {fileID: 1166824181, guid: 550d5659f2a8d524f9995f790d294007, type: 3}
   - {fileID: -1891766621, guid: d872af74b95e1e64fb6bbd7586a01fa0, type: 3}
   - {fileID: 908024570, guid: 4e49db86effa1ed4d9dd882bd3d570fd, type: 3}
   - {fileID: -510489163, guid: 68e9d65136021de4793187cbc7bd4efd, type: 3}
   - {fileID: -250712880, guid: 20e43b94d4e55fc4bb88ea14e76cedc7, type: 3}
+  - {fileID: 908024570, guid: 4e49db86effa1ed4d9dd882bd3d570fd, type: 3}
+  - {fileID: -1891766621, guid: d872af74b95e1e64fb6bbd7586a01fa0, type: 3}
