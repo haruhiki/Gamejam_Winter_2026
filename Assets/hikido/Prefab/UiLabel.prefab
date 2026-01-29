@@ -46,12 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeText: {fileID: 0}
   _gameSO: {fileID: 11400000, guid: 870aa122c51d32d478b990fc19e9de4b, type: 2}
+  _score: {fileID: 0}
   _gameimage:
   - {fileID: 0}
   - {fileID: 0}
   _image: {fileID: 0}
+  _damageImage: {fileID: 0}
   _spriteImage:
-  - {fileID: 1166824181, guid: 550d5659f2a8d524f9995f790d294007, type: 3}
+  - {fileID: 627000734, guid: ec1a28471d52f5c4689db64e77e2f787, type: 3}
   - {fileID: -1891766621, guid: d872af74b95e1e64fb6bbd7586a01fa0, type: 3}
   - {fileID: 908024570, guid: 4e49db86effa1ed4d9dd882bd3d570fd, type: 3}
   - {fileID: -510489163, guid: 68e9d65136021de4793187cbc7bd4efd, type: 3}
