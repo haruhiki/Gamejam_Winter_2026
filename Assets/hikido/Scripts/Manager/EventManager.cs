@@ -7,18 +7,24 @@ public class EventManager : MonoBehaviour
 {
 
     [SerializeField] GamaManagerSO _gameSO;
-    private float randomStatus = 0;
+    [SerializeField] Player _player;
+    public Animator animator;
+    private int randomStatus = 0;
+    private float speed = 1.0f;
+    private Vector3 _coliderScale;
     WaitForSeconds onesec;
 
     void Start()
     {
         _gameSO.eventTime = 10.0f;
+       _coliderScale = _player._weapon.GetComponent<BoxCollider>().size = new Vector3(1.5f,1.5f,1.5f);
         onesec = new WaitForSeconds(1);
     }
 
     void Update()
     {
         EventAction();
+        
     }
 
     private void EventAction()
@@ -54,25 +60,33 @@ public class EventManager : MonoBehaviour
 
     public void EventPlayer()
     {
-        _gameSO.value = Random.Range(0, _gameSO.randomValue);
+        _gameSO.value = Random.Range(1, _gameSO.randomValue);
         switch (_gameSO.value)
         {
-            case 0:
+            case 1:
                 //各種イベント処理
                 StatusSpeedEvent();
                 Debug.Log("スピードステータスイベント");
                 break;
-            case 1:
+            case 2:
                 StatusGravityEvent();
                 Debug.Log("ジャンプステータスイベント");
                 break;
-            case 2:
-                SpeedStatusDownEvent();
-                Debug.Log("スピードステータスダウンイベント");
-                break;
             case 3:
+                AnimationSpeed();
+                Debug.Log("攻撃速度変化");
+                break;
+            case 4:
+                ColiderRange();
+                Debug.Log("コライダー調整");
+                break;
+            case 5:
                 JumpStatusDownEvent();
                 Debug.Log("ジャンプステータスダウンイベント");
+                break;
+            case 6:
+                SpeedStatusDownEvent();
+                Debug.Log("スピードステータスダウンイベント");
                 break;
 
         }
@@ -119,6 +133,21 @@ public class EventManager : MonoBehaviour
         if (_gameSO.eventTime < 0) { _gameSO.statusMoveJump = status; }
     }
 
+    private void AnimationSpeed() 
+    {
+        StatusRandom(0, 10);
+        int statu = (int)speed;
+        animator.SetInteger("Speed", randomStatus);
+        if (_gameSO.eventTime < 0) { animator.SetInteger("Speed", (int)statu); }
+    }
+
+    private void ColiderRange() 
+    {
+        StatusRandom(3, 10);
+        Vector3 status = _coliderScale;
+        _player._weapon.GetComponent<BoxCollider>().size = new Vector3(randomStatus, randomStatus, randomStatus);
+        if(_gameSO.eventTime < 0) { _player._weapon.GetComponent<BoxCollider>().size = status; }
+    }
 
 
 }

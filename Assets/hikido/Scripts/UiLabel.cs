@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +13,12 @@ public class UiLabel : MonoBehaviour
     public GameObject[] _gameimage;
     public Image _image;
     public Sprite[] _spriteImage;
-    
-    
+   
     float counttime = 10;
 
     private void Start()
     {
+        _gameimage[0].SetActive(false);
         _gameimage[1].SetActive(false);
     }
 
@@ -45,10 +46,11 @@ public class UiLabel : MonoBehaviour
         }
     }
 
-
     //イメージ切り替え
+    //valueの値 = 対応するステータスイベント
     private void ImageActive()
     {
+        _gameimage[0].SetActive(true);
         switch (_gameSO.value)
         {
             case 0:
@@ -62,6 +64,15 @@ public class UiLabel : MonoBehaviour
                 break;
             case 3:
                 _image.sprite = _spriteImage[3];
+                break;
+            case 4:
+                _image.sprite = _spriteImage[4];
+                break;
+            case 5:
+                _image.sprite = _spriteImage[5];
+                break;
+            case 6:
+                _image.sprite = _spriteImage[6];
                 break;
         }
     }

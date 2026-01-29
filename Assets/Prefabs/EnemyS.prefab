@@ -245,8 +245,8 @@ MonoBehaviour:
   moveType: 0
   isFlying: 0
   minSpeed: 1
-  maxSpeed: 5
-  rotationSpeed: 50
+  maxSpeed: 10
+  rotationSpeed: 60
 --- !u!54 &7752946923301021538
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class Player : CharactorBase
 {
     [SerializeField] PlayerHP _plaerHP;
     [SerializeField] GameObject _camera;
+    [SerializeField]  public GameObject _weapon;
     [SerializeField] Rigidbody _rb;
     [SerializeField] private float sensitivity = 30;
     [SerializeField] private float clampAngle = 80f;

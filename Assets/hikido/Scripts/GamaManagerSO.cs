@@ -15,9 +15,8 @@ public class GamaManagerSO : ScriptableObject
     public float slashSpeed = 30.0f;
     public float effectlifeTime = 0.5f;
     public int   value = 0;
-    [SerializeField] public int randomValue = 4; //イベントの数
+    [SerializeField] public int randomValue = 6; //イベントの数
     
-
     [Header("タイム関連")]
     public float eventTime = 10;
     public float gameTime = 0;

@@ -48,12 +48,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   seSource: {fileID: 1454144037462033219}
   bgmSource: {fileID: 1761180758447833956}
-  bgmData: []
-  seCategories: []
+  bgmData:
+  - bgm: 0
+    bgmClip: {fileID: 8300000, guid: c4c632fb69ed6be4a9221d49ce05bf3a, type: 3}
+    bgmVolume: 1
+  seCategories:
+  - categoryName: Event
+    sounds:
+    - data: 2
+      seClip: {fileID: 8300000, guid: 34fa590cdb2353f4685310352bb9b6f8, type: 3}
+      seVolume: 0.25
+    - data: 2
+      seClip: {fileID: 8300000, guid: 0bc2ea7417b8c1c469d314be150c59e0, type: 3}
+      seVolume: 0.22
+  - categoryName: Player
+    sounds:
+    - data: 0
+      seClip: {fileID: 8300000, guid: 471f37fa52b640f4bbf3fc0779fec463, type: 3}
+      seVolume: 1
+    - data: 0
+      seClip: {fileID: 8300000, guid: b3f7e806871ee9a46a6ce8965b8b2903, type: 3}
+      seVolume: 1
+  - categoryName: Enemy
+    sounds:
+    - data: 1
+      seClip: {fileID: 8300000, guid: 4b7c3f649ed492248ad4ea4f861638af, type: 3}
+      seVolume: 1
   masterVolume: 1
   bgmmasterVolume: 1
   semasterVolume: 1
-  _gameSO: {fileID: 0}
+  _gameSO: {fileID: 11400000, guid: 870aa122c51d32d478b990fc19e9de4b, type: 2}
 --- !u!82 &1454144037462033219
 AudioSource:
   m_ObjectHideFlags: 0
