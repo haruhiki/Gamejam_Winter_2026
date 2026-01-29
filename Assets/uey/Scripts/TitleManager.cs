@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
+    [SerializeField] GamaManagerSO _gameSO;
     private bool isResult = false;
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isResult) 
+        if (_gameSO.gameflg) 
         {
             Result();
         }

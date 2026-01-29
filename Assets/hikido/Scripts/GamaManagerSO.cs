@@ -29,6 +29,7 @@ public class GamaManagerSO : ScriptableObject
     public bool damageFlg = false;
     public bool statusFlg = false;
     public bool enemyisDead = false;
+    public bool isResult = false;
 
     public Action GameEventPlayer;
     public Action GameEventEnemy;
