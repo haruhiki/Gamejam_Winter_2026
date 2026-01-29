@@ -85,7 +85,6 @@ public class Enemy_ : MonoBehaviour
         
     }
 
-
     //ÚG”»’è
     private void OnTriggerEnter(Collider other)
     {
