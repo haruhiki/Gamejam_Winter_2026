@@ -556,6 +556,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6669955956809079454, guid: c8e0cef6d55a571469361d46b627b6e7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 627000734, guid: ec1a28471d52f5c4689db64e77e2f787, type: 3}
     - target: {fileID: 7228410595793719647, guid: c8e0cef6d55a571469361d46b627b6e7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -958,6 +962,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 85.09477
       objectReference: {fileID: 0}
+    - target: {fileID: 3297216361272219818, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 3610393517410245109, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_Name
       value: Player
@@ -976,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4304174073504649454, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: sensitivity
-      value: 150
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5133879977941962006, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: _label
@@ -990,6 +998,14 @@ PrefabInstance:
       propertyPath: currentHPSlider
       value: 
       objectReference: {fileID: 1926016276}
+    - target: {fileID: 5310422549261272673, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103645212293722070, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6231552283950040651, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 2.5444818
@@ -1016,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2eeeff97b776ebb448b95d10d3cfc5c4, type: 2}
     - target: {fileID: 8838830230906234750, guid: 8c296e127fc5fe4408f67862ccd76a05, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1299,13 +1315,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2732924186811689353, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
+      propertyPath: 'enemyPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5754491859699573875, guid: 1fca0403dc1cb1844abd2897462f5b7e, type: 3}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.1673
       objectReference: {fileID: 0}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 6201414774867973466, guid: 3d83eeb8bc16d9d468a735eecdb51c7e, type: 3}
       propertyPath: m_LocalPosition.z

@@ -40,8 +40,8 @@ public class UiLabel : MonoBehaviour
     {
         CountDownTime();
         //ImageActive();
-        if(Input.GetKeyDown(KeyCode.Escape)) { ScoreCount(); }
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) {  }
+        ScoreCount();
         _damageImage.color = Color.Lerp(_damageImage.color, Color.clear, Time.deltaTime);
 
     }
