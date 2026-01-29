@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class UiLabel : MonoBehaviour
 {
     [SerializeField] public Text _timeText;
     [SerializeField] GamaManagerSO _gameSO;
+    [SerializeField] public Text _score;
 
     public GameObject[] _gameimage;
     public Image _image;
@@ -35,8 +37,7 @@ public class UiLabel : MonoBehaviour
     {
         CountDownTime();
         //ImageActive();
-        
-       
+        ScoreCount();
     }
 
     private void ActiveUIResult() 
@@ -45,6 +46,11 @@ public class UiLabel : MonoBehaviour
         {
             _gameimage[1].SetActive(true);
         }
+    }
+
+    private void ScoreCount() 
+    {
+        _score.text = _gameSO.Score.ToString();
     }
 
     private IEnumerator scalerImage() 

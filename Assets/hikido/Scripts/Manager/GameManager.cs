@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _gameSO.Reset();
+        AudioManager.Instance.PlayBGM(AudioManager.BGMSoundData.BGMDATA.GAME);
     }
 
     private void Update()
