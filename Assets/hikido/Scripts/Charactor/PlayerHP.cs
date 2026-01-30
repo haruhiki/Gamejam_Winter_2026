@@ -70,7 +70,6 @@ public class PlayerHP : MonoBehaviour
                 //”s–k‚Ìˆ—
                 if (_gameSO.statusHP <= 0)
                 {
-                    _gameSO.isResult = true;
                     _gameSO.gameflg = true;
                     //ƒCƒxƒ“ƒgw“Ç
                     _gameSO.SceneChange?.Invoke();

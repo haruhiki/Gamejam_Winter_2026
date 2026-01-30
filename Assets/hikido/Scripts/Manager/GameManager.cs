@@ -18,12 +18,12 @@ public class GameManager : MonoBehaviour
     {
         if(_gameSO == null) { return; }
 
-        _gameSO.startTime = Time.time;
+        _gameSO.gameTimeEnd -= Time.deltaTime;
         _gameSO.eventTime -= Time.deltaTime;
         //Debug.Log("_gameSO.gameTime" + _gameSO.startTime);
         //Debug.Log("_gameSO.eventTime" + _gameSO.eventTime);
 
-        if(_gameSO.startTime >= _gameSO.gameTimeEnd) 
+        if(_gameSO.gameTimeEnd < 0) 
         {
             _gameSO.gameflg = true;
             //ƒV[ƒ“‘JˆÚ

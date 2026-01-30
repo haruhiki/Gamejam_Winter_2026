@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/uey/title.unity
+    path: Assets/ueyama/Scenes/title.unity
     guid: fa70be13c6001564db8da35b64b433a7
   - enabled: 1
     path: Assets/ueyama/Scenes/Game.unity
     guid: 54b5e9f50535ca044beeb6e13602921d
   - enabled: 1
-    path: Assets/uey/Result.unity
+    path: Assets/ueyama/Scenes/Result.unity
     guid: 4ef87a3aa31301040abb8f03206b1c7d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
